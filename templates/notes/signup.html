@@ -1,0 +1,10 @@
+{% extends 'notes/base.html' %}
+
+{% block content %}
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}
+<form method="POST">
+{{ form.as_p }}
+</form>
+{% endblock content %}

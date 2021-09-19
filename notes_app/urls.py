@@ -22,8 +22,14 @@ urlpatterns = [
     path(config('ADMIN_SITE_URL'), admin.site.urls),
 
     path('', views.index, name='index'),
+
+    # Auth
+    path('signup/', views.signupuser, name='signupuser'),
+    # path('login/', views),
     
+    # Notes
     path('new/', views.newnote, name='newnote'),
     path('viewnotes/', views.viewnotes, name='mynotes'),
-    path('viewnote/<int:id>', views.viewnote, name='viewnote')
+    path('viewnote/<int:id>', views.viewnote, name='viewnote'),
+    path('deletenote/<int:id>', views.deletenote, name='deletenote'),
 ]
