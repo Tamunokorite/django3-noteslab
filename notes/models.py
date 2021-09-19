@@ -6,7 +6,7 @@ class Note(models.Model):
     title = models.CharField(max_length=150)
     content = models.TextField(blank=True)
     created = models.DateTimeField(auto_now_add=True)
-    modified = models.DateTimeField(auto_now=False, auto_now_add=False)
+    modified = models.DateTimeField(auto_now_add=True)
     deleted = models.BooleanField(default=False)
 
     class Meta:

@@ -21,5 +21,9 @@ from notes import views
 urlpatterns = [
     path(config('ADMIN_SITE_URL'), admin.site.urls),
 
-    path('', views.index, name='index')
+    path('', views.index, name='index'),
+    
+    path('new/', views.newnote, name='newnote'),
+    path('viewnotes/', views.viewnotes, name='mynotes'),
+    path('viewnote/<int:id>', views.viewnote, name='viewnote')
 ]
