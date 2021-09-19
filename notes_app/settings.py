@@ -11,6 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 try:
-    from .local_settings import *
+    from notes_app.local_settings import *
 except ImportError:
-    from .prod_settings import *
+    from notes_app.prod_settings import *
