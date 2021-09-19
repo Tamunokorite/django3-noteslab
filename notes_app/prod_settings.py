@@ -17,7 +17,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", default=False)
 
-ALLOWED_HOSTS = ["https://noteslab.herokuapp.com/"]
+ALLOWED_HOSTS = ["noteslab.herokuapp.com"]
 
 
 # Application definition
