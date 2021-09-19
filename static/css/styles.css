@@ -1,0 +1,74 @@
+/*
+ * Globals
+ */
+
+/* Links */
+/* a,
+a:focus,
+a:hover {
+  color: #fff;
+} */
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+html,
+body {
+  height: 100%;
+  background: #333;
+}
+
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  /* background-color: #f5f5f5; */
+  color: #fff;
+}
+
+.logout-text {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.add-note {
+    position: fixed;
+    top: 0.26rem;
+    left: 0;
+    padding-left: 0.26rem;
+}
+
+.form-viewnote button {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: inherit;
+    outline: none;
+    border: none;
+}
+
+.form-viewnote input, .form-viewnote textarea {
+    background: inherit;
+    color: inherit;
+    width: 100%;
+    outline: none;
+    border: 1px solid #333;
+}
+
+.form-viewnote input {
+    min-height: 60px;
+    font-size: 40px;
+}
+
+.form-viewnote textarea{
+    resize: none;
+    min-height: 400px;
+}

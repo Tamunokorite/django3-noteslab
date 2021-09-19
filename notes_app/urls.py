@@ -13,10 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls import url
 from django.contrib import admin
+from django.conf.urls.static import static
 from django.urls import path
 from decouple import config
 from notes import views
+from notes_app import settings
 
 urlpatterns = [
     path(config('ADMIN_SITE_URL'), admin.site.urls),
@@ -25,7 +28,8 @@ urlpatterns = [
 
     # Auth
     path('signup/', views.signupuser, name='signupuser'),
-    # path('login/', views),
+    path('login/', views.loginuser, name='loginuser'),
+    path('logout/', views.logoutuser, name='logoutuser'),
     
     # Notes
     path('new/', views.newnote, name='newnote'),
@@ -33,3 +37,4 @@ urlpatterns = [
     path('viewnote/<int:id>', views.viewnote, name='viewnote'),
     path('deletenote/<int:id>', views.deletenote, name='deletenote'),
 ]
+

@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.db.models.fields import DateTimeField
 from django.urls import reverse
@@ -10,6 +11,7 @@ class Note(models.Model):
     modified = models.DateTimeField(auto_now_add=True)
     deleted = models.BooleanField(default=False)
     date_deleted = models.DateTimeField(null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     class Meta:
         verbose_name = ("Note")

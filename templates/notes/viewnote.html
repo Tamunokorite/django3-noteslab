@@ -1,14 +1,14 @@
 {% extends 'notes/base.html' %}
 
 {% block content %}
-<form method="POST">
+<form method="POST" class="form-viewnote">
 {% csrf_token %}
-<button type="submit" class="btn btn-primary">Save</button>
 <input type="text" name="title" maxlength="150" required id="id_title" value="{{note.title}}">
 <div>
 <textarea name="content" cols="150" rows="40" id="id_content">
 {{note.content}}
 </textarea>
 </div>
+<button type="submit" class="btn text-primary">Save</button>
 </form>
 {% endblock content %}
